@@ -1,5 +1,12 @@
-export default function ProductRating({ rating, activeClassname = 'h-3 w-3 fill-yellow-300 text-yellow-300',
-  nonActiveClassname = 'h-3 w-3 fill-current text-gray-300' }: { rating: number, activeClassname?: string, nonActiveClassname?: string }) {
+export default function ProductRating({
+  rating,
+  activeClassname = 'h-3 w-3 fill-yellow-300 text-yellow-300',
+  nonActiveClassname = 'h-3 w-3 fill-current text-gray-300'
+}: {
+  rating: number
+  activeClassname?: string
+  nonActiveClassname?: string
+}) {
   const handleWidth = (order: number) => {
     if (order <= rating) {
       return '100%'
@@ -9,6 +16,7 @@ export default function ProductRating({ rating, activeClassname = 'h-3 w-3 fill-
     }
     return '0%'
   }
+
   return (
     <div className='flex items-center'>
       {Array(5)

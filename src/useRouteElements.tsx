@@ -76,7 +76,7 @@ export default function useRouteElements() {
           <ProductDetail />
         </MainLayout>
       )
-    },
+    }
   ])
   return routeElements
 }
